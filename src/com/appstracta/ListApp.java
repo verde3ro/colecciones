@@ -3,7 +3,9 @@ package com.appstracta;
 import com.appstracta.bean.Usuario;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class ListApp {
 
@@ -17,6 +19,12 @@ public class ListApp {
 		imprimir(usuarios);
 		usuarios.add(new Usuario(2, "Miguel", "6789", true));
 		imprimir(usuarios);
+
+		/*List<Usuario> usuarios2 = usuarios.stream()
+				.sorted(Collections.reverseOrder())
+				.collect(Collectors.toList());
+
+		imprimir(usuarios2);*/
 	}
 
 	private static List<Usuario> cargar() {
